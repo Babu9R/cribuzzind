@@ -7,10 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1a1a1a">
   <meta name="description" content="Cricbuzzind - Your online cricket betting one-stop-shop! Get expert tips, match predictions, and find the best bookmakers for cricket betting.">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="keywords" content="cricket, cricket betting, cricket tips, cricket odds, bookmakers, cricket predictions, online cricket">
+  <meta name="author" content="Cricbuzzind">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Cricbuzzind | Online Cricket Betting">
+  <meta property="og:description" content="Your online cricket betting one-stop-shop! Get expert tips, match predictions, and find the best bookmakers for cricket betting.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cricbuzzind">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cricbuzzind | Online Cricket Betting">
+  <meta name="twitter:description" content="Your online cricket betting one-stop-shop! Get expert tips, match predictions, and find the best bookmakers for cricket betting.">
+  
+  <!-- Performance and Security -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" href="assets/images/logos/cricbuzz.png">
+  <link rel="shortcut icon" type="image/png" href="assets/images/logos/cricbuzz.png">
+  <link rel="apple-touch-icon" href="assets/images/logos/cricbuzz.png">
+  <link rel="manifest" href="manifest.json">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Apply theme immediately to prevent flash of unstyled content
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      
+      // Update meta theme-color for mobile browsers
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#ffffff');
+      }
+    })();
+  </script>
 </head>
 <body> 
   <app-root></app-root>

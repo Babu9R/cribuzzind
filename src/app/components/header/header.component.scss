@@ -36,10 +36,22 @@
       color: theme-color('text-primary');
       display: flex;
       align-items: center;
+      gap: var(--spacing-sm);
       transition: color var(--transition-normal);
       
       &:hover {
         color: theme-color('link-primary');
+        
+        .logo-img {
+          transform: scale(1.05);
+        }
+      }
+      
+      .logo-img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+        transition: transform var(--transition-normal);
       }
       
       i {

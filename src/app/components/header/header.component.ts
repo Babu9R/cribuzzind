@@ -14,17 +14,14 @@ export class HeaderComponent implements OnInit {
   currentTheme: 'light' | 'dark' = 'dark';
 
   ngOnInit() {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
-    if (savedTheme) {
+    // Get the current theme from localStorage (set by app component)
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') {
       this.currentTheme = savedTheme;
     } else {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.currentTheme = prefersDark ? 'dark' : 'light';
+      // Default to dark if not set
+      this.currentTheme = 'dark';
     }
-    
-    this.applyTheme(this.currentTheme);
   }
 
   onToggleMenu() {
