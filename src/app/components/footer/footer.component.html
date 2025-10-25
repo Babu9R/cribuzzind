@@ -1,0 +1,93 @@
+<footer *ngIf="footerData" >
+
+  <div class="footer-container">
+    <!-- Top Section -->
+    <div class="footer-top">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Logo and Social Media -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <i [class]="footerData.logo.icon"></i>
+              <span>{{ footerData.logo.text }}</span>
+            </div>
+            
+            <div class="social-media">
+              <a *ngFor="let social of footerData.socialMedia" 
+                 [href]="social.link" 
+                 class="social-link">
+                <i [class]="social.icon"></i>
+              </a>
+            </div>
+            
+            <div class="footer-buttons">
+              <button class="btn btn-success trustpilot-btn">
+                <i class="fas fa-star"></i>
+                Review us on Trustpilot
+              </button>
+              <button class="btn btn-light cookie-btn">
+                Cookie Settings
+              </button>
+            </div>
+          </div>
+        </div>        
+        <!-- Navigation Sections -->
+        <div class="col-md-8" style="padding-left: 20rem;">
+          <div class="row">
+            <div class="col-md-4" *ngFor="let section of footerData.navigationSections">
+              <div class="footer-nav-section">
+                <h5 class="nav-title">{{ section.title }}</h5>
+                <ul class="nav-links">
+                  <li *ngFor="let link of section.links">
+                    <a href="#" class="nav-link">{{ link }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Disclaimer Section -->
+    <div class="footer-disclaimer">
+      <div class="row">
+        <div class="col-12">
+          <div class="disclaimer-content">
+            <p *ngFor="let disclaimer of footerData.disclaimer" class="disclaimer-text">
+              {{ disclaimer }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Regulatory Badges -->
+    <div class="footer-badges">
+      <div class="row">
+        <div class="col-12">
+          <div class="badges-container">
+            <div *ngFor="let badge of footerData.regulatoryBadges" class="regulatory-badge">
+              <img [src]="badge.image" [alt]="badge.name">
+              <span>{{ badge.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <div class="row">
+        <div class="col-12">
+          <p class="copyright-text">{{ footerData.copyright }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" (click)="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</footer>

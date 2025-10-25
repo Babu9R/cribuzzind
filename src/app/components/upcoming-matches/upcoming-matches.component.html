@@ -1,0 +1,81 @@
+<div class="upcoming-matches">
+  <!-- Header Row -->
+  <div class="section-header">
+    <h2 class="text-white mb-0">Upcoming Matches</h2>
+    <a href="#" class="see-all-link">See all</a>
+  </div>
+
+  <!-- Matches Container -->
+  <div class="matches-container">
+    <!-- Display only visible matches -->
+    <div *ngFor="let match of visibleMatches" class="match-card custom-card">
+      <!-- Match Header -->
+      <div class="match-header">
+        <div class="match-time-series">
+          <div class="match-time">
+            <span class="time-badge" [class.in-play]="match.timeRemaining.includes('mins')" 
+                  [class.upcoming]="!match.timeRemaining.includes('mins')">
+              {{ match.timeRemaining }}
+            </span>
+          </div>
+          
+          <div class="match-series">
+            <span class="series-badge">{{ match.series }}</span>
+          </div>
+        </div>
+       
+
+        <div class="match-info">
+          <h4 class="match-teams text-white mb-1">{{ match.teams }}</h4>
+          <div class="match-details text-secondary-custom">
+            <span class="me-2">
+              <i class="fas fa-calendar-alt me-1"></i>
+              {{ match.date }}
+            </span>
+            <span class="me-2">
+              <i class="fas fa-clock me-1"></i>
+              {{ match.time }}
+            </span>
+            <span class="me-2">
+              <i class="fas fa-baseball-ball me-1"></i>
+              {{ match.matchNumber }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Match Predictions -->
+      <div class="match-predictions">
+        <div *ngFor="let prediction of match.predictions" class="prediction-item">
+          <div class="prediction-bet">
+            <span class="bet-text">{{ prediction.bet }}</span>
+          </div>
+          <div class="prediction-odds">
+            <div class="bookmaker-badge">
+              <img [src]="prediction.logo" [alt]="prediction.bookmaker" class="bookmaker-logo">
+              {{ prediction.bookmaker }}
+            </div>
+            <div class="odds-badge">
+              <span class="odds-value">{{ prediction.odds }}</span>
+              <i class="fas fa-arrow-right arrow-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Match Actions -->
+      <div class="match-actions">
+        <button class="btn btn-secondary-custom w-100">
+          READ FULL PREDICTION
+        </button>
+      </div>
+    </div>
+
+    <!-- More Matches Button -->
+    <div class="more-matches-container" *ngIf="hasMoreMatches">
+      <button class="btn more-matches-btn" (click)="loadMoreMatches()">
+        More upcoming matches
+      </button>
+    </div>
+  </div>
+</div>

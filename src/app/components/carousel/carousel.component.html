@@ -1,0 +1,76 @@
+<section class="carousel-custom">
+  <div class="carousel-content">
+    <!-- Titles Section -->
+    <div class="titles-section">
+      <h1 class="display-4 text-white fw-bold mb-3">Cricbuzzind | The Home of Online Cricket Betting</h1>
+      <p class="lead text-white">Welcome to Cricbuzzind, your online cricket betting one-stop-shop!</p>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="carousel-wrapper">
+      <!-- Navigation Buttons (Outside the carousel) -->
+      <button class="carousel-nav prev" (click)="prevSlide()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-slides" [style.transform]="'translateX(-' + (currentSlide * (100 / visibleSlides)) + '%)'">
+            <div class="carousel-slide" *ngFor="let item of carouselItems">
+              <div class="carousel-card">
+                <div class="card-image">
+                  <img [src]="item.image" [alt]="item.title" class="img-fluid">
+                  <div class="card-logo">
+                    <img [src]="item.logo" [alt]="item.title" class="img-fluid">
+                  </div>
+                </div>
+                
+                <div class="card-content">
+                  <!-- First Row: Title -->
+                  <div class="card-title">
+                    {{ item.title }}
+                  </div>
+                  
+                  <!-- Second Row: Promo Code + Claim Button or Just Claim Button -->
+                  <div class="card-actions">
+                    <div class="promo-section" *ngIf="item.promoCode">
+                      <div class="promo-code">
+                        <input type="text" [value]="item.promoCode" readonly>
+                        <button class="copy-btn" 
+                                [class.copied]="copiedStates[item.id]"
+                                (click)="copyPromoCode(item.promoCode!, item.id)">
+                          <i class="fas" 
+                             [class.fa-copy]="!copiedStates[item.id]" 
+                             [class.fa-check]="copiedStates[item.id]"></i>
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <button class="btn btn-dark" 
+                            [class.full-width]="!item.promoCode"
+                            (click)="openLink(item.buttonLink)">
+                      {{ item.buttonText }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-nav next" (click)="nextSlide()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <span *ngFor="let indicator of getSlideIndicators(); let i = index" 
+            class="indicator" 
+            [class.active]="i === currentSlide"
+            (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
+</section>

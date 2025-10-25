@@ -1,0 +1,305 @@
+// ===========================================
+// MAIN STYLESHEET - Cricbuzzind Replica
+// ===========================================
+
+// Import our custom SCSS files using @use (modern syntax) - MUST be first
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+@use 'styles/base';
+@use 'styles/components';
+
+// Import Font Awesome
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+// ===========================================
+// LEGACY BOOTSTRAP-LIKE UTILITIES
+// ===========================================
+
+// Grid System
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 0.5rem;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 0.5rem;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 0 0.5rem;
+}
+
+.col-lg-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 0.5rem;
+}
+
+.col-lg-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 0 0.5rem;
+}
+
+// Responsive Grid
+@include respond-below(md) {
+  .col-md-4,
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include respond-below(lg) {
+  .col-lg-4,
+  .col-lg-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+// ===========================================
+// LEGACY COMPONENT STYLES
+// ===========================================
+
+// Button Styles
+.btn {
+  @include button-base;
+}
+
+.btn-primary-custom {
+  @include button-variant(
+    theme-color('btn-primary-bg'),
+    theme-color('text-inverse'),
+    theme-color('btn-primary-hover')
+  );
+}
+
+.btn-secondary-custom {
+  @include button-variant(
+    theme-color('btn-secondary-bg'),
+    theme-color('text-primary'),
+    theme-color('btn-secondary-hover')
+  );
+}
+
+.btn-link {
+  background: transparent;
+  color: theme-color('link-primary');
+  text-decoration: underline;
+  
+  &:hover {
+    color: theme-color('link-hover');
+  }
+}
+
+.btn-success {
+  @include button-variant($success-color, white, $success-hover);
+}
+
+.btn-light {
+  @include button-variant(theme-color('bg-tertiary'), theme-color('text-primary'), theme-color('bg-hover'));
+}
+
+.btn-dark {
+  @include button-variant(theme-color('bg-primary'), theme-color('text-primary'), theme-color('bg-secondary'));
+}
+
+// Card Styles
+.custom-card {
+  @include card-base;
+}
+
+// Navigation Styles
+.navbar-custom {
+  background-color: theme-color('bg-card');
+  border-bottom: 1px solid theme-color('border-primary');
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: var(--font-size-xl);
+  text-decoration: none;
+  color: theme-color('text-primary');
+}
+
+.nav-link {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: theme-color('text-primary');
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    color: theme-color('link-primary');
+    background-color: theme-color('bg-hover');
+  }
+}
+
+// List Styles
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Image Styles
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+// ===========================================
+// PAGE-SPECIFIC STYLES
+// ===========================================
+
+.page-container {
+  padding: var(--spacing-xl) 0;
+  min-height: calc(100vh - 200px);
+}
+
+.page-title {
+  color: theme-color('text-primary');
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.page-subtitle {
+  color: theme-color('text-secondary');
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.content-placeholder {
+  margin-top: var(--spacing-xl);
+}
+
+.placeholder-card {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  
+  h3 {
+    color: theme-color('text-primary');
+    margin-bottom: var(--spacing-md);
+  }
+  
+  p {
+    color: theme-color('text-secondary');
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+// ===========================================
+// MENU STYLES
+// ===========================================
+
+.sidebar-menu {
+  background-color: theme-color('bg-card');
+  min-height: 100vh;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  z-index: var(--z-index-modal);
+  transition: right var(--transition-normal);
+  
+  &.show {
+    right: 0;
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: theme-color('bg-overlay');
+  z-index: var(--z-index-modal-backdrop);
+  display: none;
+  
+  &.show {
+    display: block;
+  }
+}
+
+// ===========================================
+// CAROUSEL STYLES
+// ===========================================
+
+.carousel-custom {
+  margin: 3rem 0 var(--spacing-xl) 0;
+}
+
+// ===========================================
+// UTILITY CLASSES
+// ===========================================
+
+// Text Colors
+.text-white {
+  color: theme-color('text-primary') !important;
+}
+
+.text-primary-custom {
+  color: theme-color('link-primary') !important;
+}
+
+.text-secondary-custom {
+  color: theme-color('text-secondary') !important;
+}
+
+// Background Colors
+.primary-bg {
+  background-color: theme-color('link-primary') !important;
+}
+
+.dark-bg {
+  background-color: theme-color('bg-primary') !important;
+}
+
+.card-bg {
+  background-color: theme-color('bg-card') !important;
+}
+
+// ===========================================
+// RESPONSIVE UTILITIES
+// ===========================================
+
+@include respond-below(sm) {
+  .d-sm-none { display: none !important; }
+  .d-sm-block { display: block !important; }
+  .d-sm-flex { display: flex !important; }
+}
+
+@include respond-below(md) {
+  .d-md-none { display: none !important; }
+  .d-md-block { display: block !important; }
+  .d-md-flex { display: flex !important; }
+}
+
+@include respond-below(lg) {
+  .d-lg-none { display: none !important; }
+  .d-lg-block { display: block !important; }
+  .d-lg-flex { display: flex !important; }
+}

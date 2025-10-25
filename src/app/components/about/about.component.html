@@ -1,0 +1,47 @@
+<div class="about-component" *ngIf="aboutData">
+  <!-- Main Title -->
+  <div class="about-header">
+    <h1 class="about-title">{{ aboutData.title }}</h1>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="about-sections">
+    <div *ngFor="let section of aboutData.sections" class="about-section">
+      <h2 class="section-title">{{ section.title }}</h2>
+      
+      <div class="section-content">
+        <div *ngFor="let contentItem of section.content" class="content-item">
+          <p *ngIf="contentItem.type === 'paragraph'" 
+             class="section-paragraph"
+             [innerHTML]="contentItem.text">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section" *ngIf="aboutData.faqs && aboutData.faqs.length > 0">
+    <h2 class="faq-title">OCBscores FAQs</h2>
+    
+    <div class="faq-list">
+      <div *ngFor="let faq of aboutData.faqs; let i = index" 
+           class="faq-item"
+           [class.expanded]="isFaqExpanded(i)">
+        
+        <div class="faq-question" 
+             (click)="toggleFaq(i)"
+             [attr.aria-expanded]="isFaqExpanded(i)">
+          <span class="question-text">{{ faq.question }}</span>
+          <i class="fas fa-chevron-down faq-icon" 
+             [class.rotated]="isFaqExpanded(i)"></i>
+        </div>
+        
+        <div class="faq-answer" 
+             [class.show]="isFaqExpanded(i)">
+          <p class="answer-text">{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

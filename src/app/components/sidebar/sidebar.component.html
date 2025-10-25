@@ -1,0 +1,91 @@
+<div class="sidebar-component" *ngIf="sidebarData">
+  <!-- Recommended Bookmakers Section -->
+  <div class="sidebar-section">
+    <div class="section-header">
+      <h2 class="section-title">{{ sidebarData.recommendedBookmakers.title }}</h2>
+      <a href="#" class="see-all-link">{{ sidebarData.recommendedBookmakers.seeAllLink }}</a>
+    </div>
+    
+    <div class="bookmakers-list">
+      <div *ngFor="let bookmaker of sidebarData.recommendedBookmakers.bookmakers" 
+           class="bookmaker-card">
+        <!-- Rank Badge -->
+        <div class="rank-badge">{{ bookmaker.rank }}</div>
+        
+        <!-- First Row: Image (30%) + Content (70%) -->
+        <div class="card-main-row">
+          <div class="bookmaker-image-section">
+            <img [src]="bookmaker.logo" [alt]="bookmaker.name" class="bookmaker-logo">
+          </div>
+          <div class="bookmaker-content-section">
+            <div class="offer-text">{{ bookmaker.offer }}</div>
+            <button class="visit-btn">VISIT</button>
+          </div>
+        </div>
+        
+        <!-- Second Row: Promo Code Footer (only if promo code exists) -->
+        <div *ngIf="bookmaker.promoCode" class="promo-footer">
+          <div class="dotted-line"></div>
+          <div class="promo-content">
+            <span class="promo-text">Exclusive with OCB - use</span>
+            <span class="promo-code">{{ bookmaker.promoCode }}</span>
+            <button class="copy-btn" 
+                    [class.copied]="copiedStates[bookmaker.rank]"
+                    (click)="copyPromoCode(bookmaker.promoCode!, bookmaker.rank)">
+              <i class="fas" 
+                 [class.fa-copy]="!copiedStates[bookmaker.rank]" 
+                 [class.fa-check]="copiedStates[bookmaker.rank]"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join our cricket betting community Card -->
+  <div class="sidebar-section">
+    <div class="community-card">
+      <h2 class="card-title">{{ sidebarData.communityCard.title }}</h2>
+      <p class="card-description">{{ sidebarData.communityCard.description }}</p>
+      <div class="social-links">
+        <a *ngFor="let social of sidebarData.communityCard.socialLinks" 
+           [href]="social.link" 
+           class="social-link"
+           [title]="social.name"
+           target="_blank">
+          <i [class]="social.icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ongoing Tournaments Section -->
+  <div class="sidebar-section">
+    <h2 class="section-title">{{ sidebarData.ongoingTournaments.title }}</h2>
+    <div class="tournaments-list">
+      <a *ngFor="let tournament of sidebarData.ongoingTournaments.tournaments" 
+         [href]="tournament.link" 
+         class="tournament-card" target="_blank">
+        <div class="tournament-info">
+          <div class="tournament-name">{{ tournament.name }}</div>
+          <div class="tournament-date">
+            <i class="fas fa-calendar-alt" style="margin-right: 0.4em;"></i>
+            {{ tournament.dateRange }}
+          </div>
+        </div>
+        <i class="fas fa-arrow-right tournament-arrow"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sign Up For Free Predictions Card -->
+  <div class="sidebar-section">
+    <div class="signup-card">
+      <h2 class="card-title">{{ sidebarData.signUpCard.title }}</h2>
+      <p class="card-description">{{ sidebarData.signUpCard.description }}</p>
+      <button class="subscribe-btn" (click)="openLink(sidebarData.signUpCard.buttonLink)">
+        {{ sidebarData.signUpCard.buttonText }}
+      </button>
+    </div>
+  </div>
+</div>

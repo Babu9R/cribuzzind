@@ -1,0 +1,43 @@
+{
+  "siteInfo": {
+    "companyName": "Cricbuzzind",
+    "tagline": "The Home of Online Cricket Betting",
+    "welcomeMessage": "Welcome to Cricbuzzind, your online cricket betting one-stop-shop!"
+  },
+  "tableOfContents": [
+    "Top Bookmakers in 2025",
+    "Our Review Process",
+    "Newsletter",
+    "Cricbuzzind FAQs",
+    "About Cricbuzzind",
+    "IPL Match Predictions",
+    "Safe And Responsible Gambling"
+  ],
+  "aboutContent": {
+    "title": "About Cricket Betting",
+    "paragraphs": [
+      "Betting has changed a lot in recent years. You used to have to go down to the bookmaker and place your bet, then wait until the match was finished to know if you won or not. Nowadays, thanks to the development of online sports betting, it's easier and faster to place your bets. No more queueing at the bookie. No wonder cricket has seen its popularity grow over the years, thanks in no small part to the advent of T20 leagues and the ability to bet online, in-play and on the go.",
+      "But just like the game itself, betting on cricket can be complicated for beginners. This is where Cricbuzzind can help. We provide you with everything you need to start betting, from lists of the best betting sites and apps to freshly published predictions by our in-house experts."
+    ]
+  },
+  "sections": [
+    {
+      "title": "Sections Covered by Cricbuzzind",
+      "intro": "Here is a taste of what our website has to offer you:",
+      "subsections": [
+        {
+          "title": "Daily Cricket Tips",
+          "content": "Cricket betting tips are our passion. We have experts watching and analysing every match, using data from past meetings, in-depth match commentary and player insights, to provide you with the most accurate match predictions we can. We publish our tips within 48 hours of a match, and sooner if we can. Our predictions are also constantly updated and tweaked as outcomes change, so you can be sure you're getting the most comprehensive information to make your bets."
+        },
+        {
+          "title": "Cricket Betting Odds",
+          "content": "You can't place a bet without first understanding cricket betting odds. Check out the odds on upcoming matches and choose the right ones for you. We've also got plenty of how to guides relating to odds formats, bet types and much more, as well as coverage of IPL betting odds for every match."
+        },
+        {
+          "title": "Trusted Cricket Betting Websites",
+          "content": "We review and recommend only the best cricket betting sites. Our team thoroughly tests each platform for security, reliability, odds quality, and user experience to ensure you have the best betting experience possible."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+// ===========================================
+// SIDEBAR COMPONENT STYLES
+// ===========================================
+
+// Import variables and mixins
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.sidebar-component {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.sidebar-section {
+  margin-bottom: var(--spacing-lg);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Section Headers
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  
+  .section-title {
+    color: theme-color('text-primary');
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+  }
+  
+  .see-all-link {
+    color: theme-color('link-primary');
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: color var(--transition-normal);
+    
+    &:hover {
+      color: theme-color('link-hover');
+      text-decoration: underline;
+    }
+  }
+}
+
+// Recommended Bookmakers Section
+.bookmakers-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.bookmaker-card {
+  position: relative;
+  background: theme-color('bg-card');
+  border: 1px solid theme-color('border-primary');
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    border-color: theme-color('link-primary');
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.rank-badge {
+  position: absolute;
+  top: -8px;
+  left: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: theme-color('link-primary');
+  color: theme-color('text-inverse');
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  z-index: 1;
+}
+
+.card-main-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.bookmaker-image-section {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  
+  .bookmaker-logo {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    max-height: 40px;
+    object-fit: contain;
+  }
+}
+
+.bookmaker-content-section {
+  flex: 0 0 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.offer-text {
+  color: theme-color('text-primary');
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  flex: 1;
+}
+
+.visit-btn {
+  background: theme-color('link-primary');
+  color: theme-color('text-inverse');
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+  
+  &:hover {
+    background: theme-color('link-hover');
+    transform: translateY(-1px);
+  }
+}
+
+// Promo Code Footer
+.promo-footer {
+  margin-top: var(--spacing-sm);
+}
+
+.dotted-line {
+  width: 100%;
+  height: 1px;
+  border-top: 1px dotted theme-color('border-secondary');
+  margin-bottom: var(--spacing-sm);
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding-left: var(--spacing-sm);
+}
+
+.promo-text {
+  color: theme-color('text-secondary');
+  font-size: var(--font-size-xs);
+  margin-right: 1rem;
+}
+
+.promo-code {
+  color: theme-color('link-primary');
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: theme-color('link-primary');
+  color: theme-color('text-inverse');
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+
+  &:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+
+  i {
+    transition: all 0.3s ease;
+    transform-origin: center;
+    font-size: var(--font-size-xs);
+  }
+
+  &.copied {
+    background: var(--btn-inverse-bg) !important; // Green background when copied
+    color: var(--btn-inverse-text) !important;
+    border-color: var(--btn-inverse-bg) !important;
+
+    i {
+      transform: scale(1.2);
+      animation: checkmark-bounce 0.6s ease;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+
+  &:active::before {
+    width: 100px;
+    height: 100px;
+  }
+  
+  &:hover {
+    background: theme-color('link-hover');
+    transform: scale(1.05);
+  }
+}
+
+// Community Card
+.community-card {
+  background: theme-color('bg-card');
+  border: 1px solid theme-color('border-primary');
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    border-color: theme-color('link-primary');
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .card-title {
+    color: theme-color('text-primary');
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+    margin-top: 0;
+  }
+  
+  .card-description {
+    color: theme-color('text-secondary');
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-relaxed);
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: theme-color('bg-hover');
+    color: theme-color('text-primary');
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    transition: all var(--transition-normal);
+    
+    &:hover {
+      background: theme-color('link-primary');
+      color: theme-color('text-inverse');
+      transform: translateY(-2px);
+    }
+    
+    i {
+      font-size: var(--font-size-sm);
+    }
+  }
+}
+
+// Ongoing Tournaments Section
+.tournaments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.tournament-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: theme-color('bg-card');
+  border: 1px solid theme-color('border-primary');
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    border-color: theme-color('link-primary');
+    box-shadow: var(--shadow-sm);
+    transform: translateX(4px);
+  }
+}
+
+.tournament-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tournament-name {
+  color: theme-color('text-primary');
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-snug);
+}
+
+.tournament-date {
+  color: theme-color('text-secondary');
+  font-size: var(--font-size-xs);
+}
+
+.tournament-arrow {
+  color: theme-color('link-primary');
+  font-size: var(--font-size-sm);
+  margin-left: var(--spacing-sm);
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
+}
+
+.tournament-card:hover .tournament-arrow {
+  transform: translateX(2px);
+}
+
+// Sign Up Card
+.signup-card {
+  background: theme-color('bg-card');
+  border: 1px solid theme-color('border-primary');
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    border-color: theme-color('link-primary');
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .card-title {
+    color: theme-color('text-primary');
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+    margin-top: 0;
+  }
+  
+  .card-description {
+    color: theme-color('text-secondary');
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-relaxed);
+  }
+}
+
+.subscribe-btn {
+  width: 100%;
+  background: theme-color('link-primary');
+  color: theme-color('text-inverse');
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    background: theme-color('link-hover');
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// Responsive Design
+@include respond-below(md) {
+  .sidebar-component {
+    gap: var(--spacing-md);
+  }
+  
+  .bookmaker-card {
+    padding: var(--spacing-xs);
+  }
+  
+  .rank-badge {
+    width: 20px;
+    height: 20px;
+    font-size: var(--font-size-xs);
+    top: -6px;
+  }
+  
+  .bookmaker-image-section {
+    min-height: 50px;
+    
+    .bookmaker-logo {
+      max-width: 60px;
+      max-height: 30px;
+    }
+  }
+  
+  .card-main-row {
+    gap: var(--spacing-xs);
+  }
+  
+  .bookmaker-content-section {
+    gap: var(--spacing-xs);
+  }
+  
+  .offer-text {
+    font-size: var(--font-size-xs);
+  }
+  
+  .visit-btn {
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+  }
+  
+  .promo-content {
+    padding-left: var(--spacing-xs);
+    gap: var(--spacing-xs);
+  }
+  
+  .promo-text,
+  .promo-code {
+    font-size: var(--font-size-xs);
+    margin-right: 1rem;
+  }
+  
+  .copy-btn {
+    width: 18px;
+    height: 18px;
+    
+    i {
+      font-size: var(--font-size-xs);
+    }
+  }
+  
+  .community-card,
+  .signup-card {
+    padding: var(--spacing-sm);
+  }
+  
+  .card-title {
+    font-size: var(--font-size-base);
+  }
+  
+  .card-description {
+    font-size: var(--font-size-xs);
+  }
+  
+  .social-link {
+    width: 28px;
+    height: 28px;
+    
+    i {
+      font-size: var(--font-size-xs);
+    }
+  }
+  
+  .tournament-card {
+    padding: var(--spacing-xs);
+  }
+  
+  .tournament-name {
+    font-size: var(--font-size-xs);
+  }
+  
+  .tournament-date {
+    font-size: var(--font-size-xs);
+  }
+  
+  .subscribe-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+}
+
+// Keyframe animations
+@keyframes checkmark-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

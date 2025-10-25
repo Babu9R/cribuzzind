@@ -1,0 +1,49 @@
+<header class="navbar-custom header-component">
+  <div class="container-fluid">
+    <div class="header-content">
+      <!-- Logo -->
+      <div class="logo-section">
+        <a routerLink="/" class="navbar-brand text-white">
+          <img src="assets/images/icons/cricket.png" alt="Cricket Logo" class="me-2" style="width: 26px; height: 26px; vertical-align: middle; margin-right: 0.5rem;">
+          CRICBUZZIND
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="navbar-nav">
+        <a class="nav-link text-white" routerLink="/tips" routerLinkActive="active">
+          <i class="fas fa-trophy me-1"></i>
+          Tips
+        </a>
+        <a class="nav-link text-white" routerLink="/bookmakers" routerLinkActive="active">
+          <i class="fas fa-lightbulb me-1"></i>
+          Bookmakers
+        </a>
+        <a class="nav-link text-white" routerLink="/odds" routerLinkActive="active">
+          <i class="fas fa-chart-line me-1"></i>
+          Odds
+        </a>
+      </nav>
+
+      <!-- Right Side Actions -->
+      <div class="header-actions">
+        <button class="btn btn-primary-custom me-3">
+          AUSTRALIA VS INDIA
+        </button>
+        
+        <!-- Theme Toggle Button -->
+        <button 
+          class="theme-toggle me-2" 
+          (click)="toggleTheme()"
+          [attr.aria-label]="themeLabel"
+          title="{{ themeLabel }}">
+          <i [class]="themeIcon"></i>
+        </button>
+        
+        <button class="btn btn-link text-white menu-toggle" (click)="onToggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

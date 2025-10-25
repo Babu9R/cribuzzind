@@ -1,0 +1,105 @@
+{
+  "recommendedBookmakers": {
+    "title": "Recommended bookmakers",
+    "seeAllLink": "See all",
+    "bookmakers": [
+      {
+        "rank": 1,
+        "name": "1XBET",
+        "logo": "assets/images/logos/1xbet-logo.png",
+        "offer": "$1,900 Bonus & 150 Free Spins",
+        "promoCode": "OCB2025",
+        "visitLink": "#"
+      },
+      {
+        "rank": 2,
+        "name": "dafabet",
+        "logo": "assets/images/logos/dafabet-logo.png",
+        "offer": "100% Welcome Bonus up to $200",
+        "promoCode": null,
+        "visitLink": "#"
+      },
+      {
+        "rank": 3,
+        "name": "BC.GAME",
+        "logo": "assets/images/logos/bcgame-logo.png",
+        "offer": "180% Welcome Bonus + 20 Free Spins",
+        "promoCode": null,
+        "visitLink": "#"
+      },
+      {
+        "rank": 4,
+        "name": "Stake",
+        "logo": "assets/images/logos/dummy-logo.png",
+        "offer": "200% Welcome Bonus",
+        "promoCode": null,
+        "visitLink": "#"
+      },
+      {
+        "rank": 5,
+        "name": "EPICBET",
+        "logo": "assets/images/logos/dafabet-logo.png",
+        "offer": "150% Welcome Bonus",
+        "promoCode": "OCB2025",
+        "visitLink": "#"
+      }
+    ]
+  },
+  "communityCard": {
+    "title": "Join our cricket betting community",
+    "description": "Follow us on social media to stay up to date!",
+    "socialLinks": [
+      {
+        "name": "Twitter",
+        "icon": "fab fa-twitter",
+        "link": "https://x.com"
+      },
+      {
+        "name": "Instagram",
+        "icon": "fab fa-instagram",
+        "link": "https://www.instagram.com"
+      },
+      {
+        "name": "WhatsApp",
+        "icon": "fab fa-whatsapp",
+        "link": "https://www.whatsapp.com/?lang=en"
+      },
+      {
+        "name": "Telegram",
+        "icon": "fab fa-telegram",
+        "link": "https://telegram.org"
+      },
+      {
+        "name": "Facebook",
+        "icon": "fab fa-facebook",
+        "link": "https://www.facebook.com"
+      }
+    ]
+  },
+  "ongoingTournaments": {
+    "title": "Ongoing Tournaments",
+    "tournaments": [
+      {
+        "name": "Women's World Cup Match Predictions and Tips",
+        "dateRange": "30 Sep - 02 Nov 2025",
+        "link": "#"
+      },
+      {
+        "name": "England Tour Of New Zealand Match Prediction and Tips",
+        "dateRange": "26 Oct - 01 Nov 2025",
+        "link": "#"
+      },
+      {
+        "name": "India Tour Of Australia Match Prediction and Tips",
+        "dateRange": "19 Oct - 08 Nov 2025",
+        "link": "#"
+      }
+    ]
+  },
+  "signUpCard": {
+    "title": "Sign Up For Free Predictions!",
+    "description": "Join the fans today and get expert tips and predictions on international and domestic matches, fantasy picks and much more.",
+    "buttonText": "SUBSCRIBE",
+    "buttonLink": "#"
+  }
+}

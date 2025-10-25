@@ -1,0 +1,75 @@
+<div class="recommended-bookmakers">
+  <div class="section-header">
+    <h2 class="text-white mb-0">Our Recommended Bookmakers In 2025</h2>
+    <a href="#" class="see-all-link">See all</a>
+  </div>
+
+  <div class="bookmakers-container">
+    <div *ngFor="let bookmaker of visibleBookmakers" class="bookmaker-card custom-card">
+      <!-- Category Badge -->
+      <div class="category-badge">
+        <span class="badge-text">{{ bookmaker.title }}</span>
+      </div>
+      
+      <!-- Card Content -->
+      <div class="card-content">
+        <!-- Left Section: Logo and Rating -->
+        <div class="left-section">
+          <div class="bookmaker-logo">
+            <img [src]="bookmaker.logo" [alt]="bookmaker.name" class="logo-img">
+          </div>
+          <div class="rating-section">
+            <div class="stars">
+              <i class="fas fa-star" *ngFor="let star of getStars(bookmaker.rank)"></i>
+              <i class="far fa-star" *ngFor="let star of getEmptyStars(bookmaker.rank)"></i>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Section: Offer and Actions -->
+        <div class="right-section">
+
+          <div class="offer-content-container">
+            <div class="offer-content">
+              <p class="offer-description">{{ bookmaker.description }}</p>
+              <h5 class="offer-title">{{ bookmaker.offer }}</h5>
+              
+              <!-- Promo Code Section -->
+              <div class="promo-section" *ngIf="bookmaker.promoCode">
+                <div class="promo-code">
+                  <span class="promo-text">Exclusive with OCB - use {{ bookmaker.promoCode }}</span>
+                  <button class="copy-btn" 
+                          [class.copied]="copiedStates[bookmaker.id]"
+                          (click)="copyPromoCode(bookmaker.promoCode!, bookmaker.id)">
+                    <i class="fas" 
+                       [class.fa-copy]="!copiedStates[bookmaker.id]" 
+                       [class.fa-check]="copiedStates[bookmaker.id]"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="bookmaker-actions">
+              <button class="btn visit-btn">VISIT</button>
+              <button class="btn review-btn">REVIEW</button>
+            </div>
+          </div>
+          
+          
+          <!-- Disclaimer -->
+          <div class="disclaimer">
+            <p class="disclaimer-text">Advertising link. 18+. Terms & Conditions apply. Please play responsibly. begambleaware.org</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Bookmakers Button -->
+    <div class="more-bookmakers-container" *ngIf="hasMoreBookmakers">
+      <button class="btn more-bookmakers-btn" (click)="loadMoreBookmakers()">
+        Show more bookmakers
+      </button>
+    </div>
+  </div>
+</div>

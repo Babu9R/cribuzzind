@@ -1,0 +1,16 @@
+<div class="table-of-contents">
+  <div class="content-section custom-card" *ngIf="contentData">
+    <h2 class="text-white mb-3">Table of contents</h2>
+    <ul class="table-of-contents-list">
+      <li *ngFor="let item of visibleItems">
+        <a href="#" class="content-link">
+          <i class="fas fa-arrow-right me-2"></i>
+          {{ item }}
+        </a>
+      </li>
+    </ul>
+    <button class="btn btn-secondary-custom mt-3" (click)="toggleExpanded()">
+      {{ getButtonText() }}
+    </button>
+  </div>
+</div>

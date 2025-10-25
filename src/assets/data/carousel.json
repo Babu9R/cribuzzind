@@ -1,0 +1,58 @@
+{
+  "carouselItems": [
+    {
+      "id": 1,
+      "image": "assets/images/carousel/12BET-01.jpg",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Get Your Exclusive Offer $1,900 Bonus & 150 Free Spins",
+      "promoCode": "CRIC2025",
+      "buttonText": "CLAIM",
+      "buttonLink": "https://www.cricbuzz.com"
+    },
+    {
+      "id": 2,
+      "image": "assets/images/carousel/DAFABET-01.jpg",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Bet on 20,000+ Sports Markets Enjoy Bonus 160% up to $185",
+      "promoCode": null,
+      "buttonText": "CLAIM",
+      "buttonLink": "https://www.cricbuzz.com"
+    },
+    {
+      "id": 3,
+      "image": "assets/images/carousel/EKBET -01.jpg",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Weekly Chance to WIN Shared Prizes Worth up to $75,000",
+      "promoCode": null,
+      "buttonText": "CLAIM",
+      "buttonLink": "https://www.cricbuzz.com"
+    },
+    {
+      "id": 4,
+      "image": "assets/images/carousel/INDIBET-01.jpg",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Welcome Bonus Up to 120% + 100 Free Spins",
+      "promoCode": null,
+      "buttonText": "CLAIM",
+      "buttonLink": "https://www.cricbuzz.com"
+    },
+    {
+      "id": 5,
+      "image": "assets/images/carousel/INDIBET-01.jpg",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Get Your Sports Welcome Bonus 150% up to $450",
+      "promoCode": "WELCOME150",
+      "buttonText": "CLAIM",
+      "buttonLink": "https://www.cricbuzz.com"
+    },
+    {
+      "id": 6,
+      "image": "assets/images/carousel/INDIBET-01.jpg",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Sports Bonus 100% up to $100 USD",
+      "promoCode": "CRIC2025",
+      "buttonText": "CLAIM",
+      "buttonLink": "https://www.cricbuzz.com"
+    }
+  ]
+}

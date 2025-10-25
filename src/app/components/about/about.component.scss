@@ -1,0 +1,218 @@
+// ===========================================
+// ABOUT COMPONENT STYLES
+// ===========================================
+
+// Import variables and mixins
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.about-component {
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-header {
+  margin-bottom: var(--spacing-xl);
+  
+  .about-title {
+    color: theme-color('text-primary');
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-lg);
+    margin-top: 0;
+    line-height: var(--line-height-tight);
+  }
+}
+
+.about-sections {
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-section {
+  margin-bottom: var(--spacing-xl);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  color: theme-color('text-primary');
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  margin-top: 0;
+  line-height: var(--line-height-tight);
+}
+
+.section-content {
+  margin-bottom: var(--spacing-lg);
+}
+
+.content-item {
+  margin-bottom: var(--spacing-md);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-paragraph {
+  color: theme-color('text-primary');
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  // Style for highlighted links within paragraphs
+  :global(.highlight-link) {
+    color: theme-color('link-primary');
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    transition: color var(--transition-normal);
+    
+    &:hover {
+      color: theme-color('link-hover');
+      text-decoration: underline;
+    }
+  }
+}
+
+// FAQ Section Styles
+.faq-section {
+  margin-top: var(--spacing-xl);
+  
+  .faq-title {
+    color: theme-color('text-primary');
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-lg);
+    margin-top: 0;
+    line-height: var(--line-height-tight);
+  }
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.faq-item {
+  background: theme-color('bg-card');
+  border: 1px solid theme-color('border-primary');
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    border-color: theme-color('link-primary');
+    box-shadow: var(--shadow-sm);
+  }
+  
+  &.expanded {
+    border-color: theme-color('link-primary');
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  cursor: pointer;
+  background: theme-color('bg-card');
+  transition: background-color var(--transition-normal);
+  
+  &:hover {
+    background: theme-color('bg-hover');
+  }
+  
+  .question-text {
+    color: theme-color('text-primary');
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    flex: 1;
+    margin-right: var(--spacing-md);
+  }
+  
+  .faq-icon {
+    color: theme-color('link-primary');
+    font-size: var(--font-size-sm);
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+    
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal) ease-out;
+  
+  &.show {
+    max-height: 200px; // Adjust based on content
+  }
+  
+  .answer-text {
+    color: theme-color('text-secondary');
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+    padding: 0 var(--spacing-lg) var(--spacing-md) var(--spacing-lg);
+    margin: 0;
+  }
+}
+
+// Responsive Design
+@include respond-below(md) {
+  .about-header .about-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .section-title,
+  .faq-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .section-paragraph {
+    font-size: var(--font-size-sm);
+  }
+  
+  .faq-question {
+    padding: var(--spacing-sm) var(--spacing-md);
+    
+    .question-text {
+      font-size: var(--font-size-sm);
+    }
+  }
+  
+  .faq-answer .answer-text {
+    padding: 0 var(--spacing-md) var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+}
+
+@include respond-below(sm) {
+  .about-header .about-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .section-title,
+  .faq-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .faq-question {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    
+    .question-text {
+      font-size: var(--font-size-xs);
+    }
+  }
+}

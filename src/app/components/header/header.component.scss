@@ -1,0 +1,214 @@
+// ===========================================
+// HEADER COMPONENT STYLES
+// ===========================================
+
+// Import variables and mixins
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.header-component {
+  background-color: theme-color('bg-card');
+  border-bottom: 1px solid theme-color('border-primary');
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: var(--z-index-fixed);
+  transition: all var(--transition-normal);
+  
+  .header-content {
+    @include flex-between;
+    padding: var(--spacing-sm) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+  
+  .logo-section {
+    flex-shrink: 0;
+    
+    .navbar-brand {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      text-decoration: none;
+      color: theme-color('text-primary');
+      display: flex;
+      align-items: center;
+      transition: color var(--transition-normal);
+      
+      &:hover {
+        color: theme-color('link-primary');
+      }
+      
+      i {
+        margin-right: var(--spacing-sm);
+        color: theme-color('link-primary');
+      }
+    }
+  }
+  
+  .navbar-nav {
+    @include flex-center;
+    gap: var(--spacing-lg);
+    flex: 1;
+    justify-content: center;
+    
+    .nav-link {
+      @include flex-center;
+      text-decoration: none;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--border-radius-md);
+      color: theme-color('text-primary');
+      transition: all var(--transition-normal);
+      font-weight: var(--font-weight-medium);
+      
+      &:hover {
+        background-color: theme-color('bg-hover');
+        color: theme-color('link-primary');
+        text-decoration: none;
+      }
+      
+      &.active {
+        background-color: theme-color('link-primary');
+        color: theme-color('text-inverse');
+      }
+      
+      i {
+        margin-right: var(--spacing-xs);
+        font-size: var(--font-size-sm);
+      }
+    }
+  }
+  
+  .header-actions {
+    @include flex-center;
+    gap: var(--spacing-md);
+    flex-shrink: 0;
+    
+    .btn-primary-custom {
+      @include button-base;
+      @include button-variant(
+        theme-color('btn-primary-bg'),
+        theme-color('text-inverse'),
+        theme-color('btn-primary-hover')
+      );
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      border-radius: var(--border-radius-md);
+      padding: var(--btn-padding-sm);
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+    }
+    
+    .menu-toggle {
+      @include flex-center;
+      padding: var(--spacing-sm);
+      background: transparent;
+      border: none;
+      color: theme-color('text-primary');
+      font-size: var(--font-size-lg);
+      border-radius: var(--border-radius-md);
+      transition: all var(--transition-normal);
+      
+      &:hover {
+        background-color: theme-color('bg-hover');
+        color: theme-color('link-primary');
+      }
+    }
+    
+    // Theme toggle button
+    .theme-toggle {
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 1px solid theme-color('border-primary');
+      border-radius: var(--border-radius-md);
+      color: theme-color('text-primary');
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      
+      &:hover {
+        background-color: theme-color('bg-hover');
+        border-color: theme-color('link-primary');
+        color: theme-color('link-primary');
+        transform: scale(1.05);
+      }
+      
+      &:active {
+        transform: scale(0.95);
+      }
+      
+      i {
+        font-size: var(--font-size-lg);
+        transition: transform var(--transition-normal);
+      }
+      
+      &:hover i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@include respond-below(md) {
+  .header-component {
+    .header-content {
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+    }
+    
+    .navbar-nav {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      margin-top: var(--spacing-sm);
+    }
+    
+    .header-actions {
+      order: 2;
+    }
+  }
+}
+
+@include respond-below(sm) {
+  .header-component {
+    .header-content {
+      padding-left: var(--spacing-sm);
+      padding-right: var(--spacing-sm);
+    }
+    
+    .navbar-nav {
+      gap: var(--spacing-sm);
+      
+      .nav-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-sm);
+      }
+    }
+    
+    .header-actions {
+      gap: var(--spacing-sm);
+      
+      .btn-primary-custom {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+      }
+      
+      .theme-toggle {
+        width: 35px;
+        height: 35px;
+        
+        i {
+          font-size: var(--font-size-base);
+        }
+      }
+    }
+  }
+}

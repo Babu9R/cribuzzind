@@ -1,0 +1,64 @@
+{
+  "bookmakers": [
+    {
+      "id": 1,
+      "rank": 1,
+      "name": "1XBET",
+      "logo": "assets/images/logos/1xbet-logo.png",
+      "title": "Top Choice",
+      "offer": "$1,900 Bonus & 150 Free Spins",
+      "description": "Get Your Exclusive Offer",
+      "promoCode": "CRIC2025",
+      "visitLink": "#",
+      "reviewLink": "#"
+    },
+    {
+      "id": 2,
+      "rank": 2,
+      "name": "Dafabet",
+      "logo": "assets/images/logos/dafabet-logo.png",
+      "title": "Premier Exchange",
+      "offer": "160% up to $185",
+      "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
+      "promoCode": null,
+      "visitLink": "#",
+      "reviewLink": "#"
+    },
+    {
+      "id": 3,
+      "rank": 3,
+      "name": "BC.GAME",
+      "logo": "assets/images/logos/bcgame-logo.png",
+      "title": "Player Fav",
+      "offer": "Up to 120% + 100 Free Spins",
+      "description": "Welcome Bonus",
+      "promoCode": null,
+      "visitLink": "#",
+      "reviewLink": "#"
+    },
+    {
+      "id": 4,
+      "rank": 4,
+      "name": "Stake",
+      "logo": "assets/images/logos/dummy-logo.png",
+      "title": "Best Streaming",
+      "offer": "Worth up to $75,000",
+      "description": "Weekly Chance to WIN Shared Prizes",
+      "promoCode": null,
+      "visitLink": "#",
+      "reviewLink": "#"
+    },
+    {
+      "id": 5,
+      "rank": 5,
+      "name": "EPICBET",
+      "logo": "assets/images/logos/epicbet-logo.png",
+      "title": "New Crypto Site",
+      "offer": "100% up to $100 USD",
+      "description": "Sports Bonus",
+      "promoCode": "CRIC2025",
+      "visitLink": "#",
+      "reviewLink": "#"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!-- Menu Overlay -->
+<div class="menu-overlay" [class.show]="isMenuOpen" (click)="onCloseMenu()"></div>
+
+<!-- Sidebar Menu -->
+<div class="sidebar-menu" [class.show]="isMenuOpen">
+  <div class="menu-header">
+    <h5 class="text-white mb-0">Menu</h5>
+    <button class="btn btn-link text-white p-0" (click)="onCloseMenu()">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="menu-body">
+    <ul class="list-unstyled">
+      <li *ngFor="let item of menuItems" class="menu-item">
+        <!-- Normal Menu Item -->
+        <div *ngIf="item.type === 'normal'" 
+             class="menu-link" 
+             (click)="navigateToLink(item.link)">
+          <i [class]="item.icon"></i>
+          <span>{{ item.name }}</span>
+        </div>
+        
+        <!-- Group Menu Item -->
+        <div *ngIf="item.type === 'group'">
+          <div class="menu-link group-header" 
+               (click)="toggleGroup(item.name)">
+            <i [class]="item.icon"></i>
+            <span>{{ item.name }}</span>
+            <i class="fas fa-chevron-down ml-auto" 
+               [class.rotated]="isGroupExpanded(item.name)"></i>
+          </div>
+          
+          <!-- Sub Items -->
+          <ul *ngIf="isGroupExpanded(item.name)" class="sub-menu">
+            <li *ngFor="let subItem of item.subItems" class="sub-menu-item">
+              <a class="sub-menu-link" 
+                 (click)="navigateToLink(subItem.link)">
+                {{ subItem.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
