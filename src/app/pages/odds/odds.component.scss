@@ -1,0 +1,13 @@
+// Import variables and mixins
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.app-content {
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  padding: 0 var(--spacing-4xl) 0 var(--spacing-4xl);
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  transition: background-color var(--transition-normal);
+  margin-top: 6rem;
+}

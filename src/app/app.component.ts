@@ -4,12 +4,6 @@ import { DOCUMENT } from '@angular/common';
 import { inject } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { UpcomingMatchesComponent } from './components/upcoming-matches/upcoming-matches.component';
-import { RecommendedBookmakersComponent } from './components/recommended-bookmakers/recommended-bookmakers.component';
-import { TableOfContentsComponent } from './components/table-of-contents/table-of-contents.component';
-import { AboutComponent } from './components/about/about.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -19,12 +13,6 @@ import { RouterModule } from '@angular/router';
   imports: [
     HeaderComponent,
     MenuComponent,
-    CarouselComponent,
-    UpcomingMatchesComponent,
-    RecommendedBookmakersComponent,
-    TableOfContentsComponent,
-    AboutComponent,
-    SidebarComponent,
     FooterComponent,
     CommonModule,
     RouterModule

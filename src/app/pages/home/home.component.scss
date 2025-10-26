@@ -1,0 +1,72 @@
+// Import variables and mixins
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.app-content {
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  padding: 0 var(--spacing-4xl) 0 var(--spacing-4xl);
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  transition: background-color var(--transition-normal);
+  margin-top: 6rem;
+}
+
+.content-container {
+  max-width: 100%;
+  padding: var(--spacing-md);
+}
+
+.content-left-column {
+  padding: var(--spacing-md);
+}
+
+.content-right-column {
+  padding: var(--spacing-md);
+}
+
+// Responsive Design
+@include respond-below(xl) {
+  .app-content {
+    padding: var(--spacing-xl) var(--spacing-3xl) 0 var(--spacing-3xl);
+  }
+  
+  .content-container {
+    padding: 0 var(--spacing-3xl);
+  }
+}
+
+@include respond-below(lg) {
+  .app-content {
+    padding: var(--spacing-xl) var(--spacing-xl) 0 var(--spacing-xl);
+  }
+  
+  .content-container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+@include respond-below(md) {
+  .app-content {
+    padding: var(--spacing-lg) var(--spacing-md) 0 var(--spacing-md);
+  }
+  
+  .content-container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .content-left-column,
+  .content-right-column {
+    padding: var(--spacing-sm);
+  }
+}
+
+@include respond-below(sm) {
+  .app-content {
+    padding: var(--spacing-lg) var(--spacing-sm) 0 var(--spacing-sm);
+  }
+  
+  .content-container {
+    padding: 0 var(--spacing-sm);
+  }
+}
