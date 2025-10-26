@@ -7,9 +7,11 @@ A modern Angular application for cricket betting tips, predictions, and bookmake
 - 🌓 **Dark/Light Theme** - Automatic theme management with localStorage persistence
 - 📱 **Responsive Design** - Mobile-first approach with modern UI/UX
 - ⚡ **Performance Optimized** - Production-ready build configuration
-- 🎨 **Modern UI** - Clean and intuitive interface
+- 🎨 **Modern UI** - Clean and intuitive interface with transparent logo
 - 🔍 **SEO Optimized** - Meta tags, Open Graph, and Twitter Cards
 - ♿ **Accessible** - WCAG compliant components
+- 🎯 **Custom Branding** - Favicon and logo properly configured
+- 📱 **PWA Ready** - Web manifest for installable app experience
 
 ## Theme Management
 
