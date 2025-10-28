@@ -86,35 +86,7 @@
           "logo": "assets/images/logos/bcgame-logo.png"
         }
       ]
-    },
-    {
-      "id": 4,
-      "timeRemaining": "In 6 hours",
-      "teams": "India Women VS New Zealand Women",
-      "date": "Oct 23, 2025",
-      "time": "09:30 AM",
-      "matchNumber": "24th Match",
-      "series": "ICCWWC",
-      "predictions": [
-        {
-          "bet": "India Women to win",
-          "odds": "1.29",
-          "bookmaker": "1XBET",
-          "logo": "assets/images/logos/1xbet-logo.png"
-        },
-        {
-          "bet": "Deepti Sharma to pick up Over 1.5 wickets",
-          "odds": "1.72",
-          "bookmaker": "@dafabet",
-          "logo": "assets/images/logos/dafabet-logo.png"
-        },
-        {
-          "bet": "Smriti Mandhana to score Over 34.5 runs",
-          "odds": "1.83",
-          "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bcgame-logo.png"
-        }
-      ]
     }
+
   ]
 }
