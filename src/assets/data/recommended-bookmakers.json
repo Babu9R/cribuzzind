@@ -3,62 +3,86 @@
     {
       "id": 1,
       "rank": 1,
-      "name": "1XBET",
-      "logo": "assets/images/logos/1xbet-logo.png",
+      "name": "SKY247",
+      "logo": "assets/images/logos/sky247-logo.jpg",
       "title": "Top Choice",
       "offer": "$1,900 Bonus & 150 Free Spins",
       "description": "Get Your Exclusive Offer",
       "promoCode": "CRIC2025",
-      "visitLink": "#",
-      "reviewLink": "#"
+      "visitLink": "https://wlskyinfopartners.adsrv.eacdn.com/C.ashx?btag=a_295b_432c_&affid=81&siteid=295&adid=432&c=",
+      "reviewLink": "https://wlskyinfopartners.adsrv.eacdn.com/C.ashx?btag=a_295b_432c_&affid=81&siteid=295&adid=432&c="
     },
     {
       "id": 2,
       "rank": 2,
       "name": "Dafabet",
-      "logo": "assets/images/logos/dafabet-logo.png",
+      "logo": "assets/images/logos/dafabet-logo.jpg",
       "title": "Premier Exchange",
       "offer": "160% up to $185",
       "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
       "promoCode": null,
-      "visitLink": "#",
-      "reviewLink": "#"
+      "visitLink": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136",
+      "reviewLink": ""
     },
     {
       "id": 3,
       "rank": 3,
-      "name": "BC.GAME",
-      "logo": "assets/images/logos/bcgame-logo.png",
-      "title": "Player Fav",
-      "offer": "Up to 120% + 100 Free Spins",
-      "description": "Welcome Bonus",
+      "name": "INIBET",
+      "logo": "assets/images/logos/inibet-logo.jpg",
+      "title": "Premier Exchange",
+      "offer": "160% up to $185",
+      "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
       "promoCode": null,
-      "visitLink": "#",
-      "reviewLink": "#"
+      "visitLink": "https://www.indibet.in/RAJESH13685",
+      "reviewLink": "https://www.indibet.in/RAJESH13685"
     },
     {
       "id": 4,
       "rank": 4,
-      "name": "Stake",
-      "logo": "assets/images/logos/dummy-logo.png",
-      "title": "Best Streaming",
-      "offer": "Worth up to $75,000",
-      "description": "Weekly Chance to WIN Shared Prizes",
+      "name": "12BET",
+      "logo": "assets/images/logos/12bet-logo.jpg",
+      "title": "Premier Exchange",
+      "offer": "160% up to $185",
+      "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
       "promoCode": null,
-      "visitLink": "#",
-      "reviewLink": "#"
+      "visitLink": "https://goto.12Bix24.com/join/10911/hien/xyz/index.html",
+      "reviewLink": "https://goto.12Bix24.com/join/10911/hien/xyz/index.html"
     },
     {
       "id": 5,
       "rank": 5,
-      "name": "EPICBET",
-      "logo": "assets/images/logos/epicbet-logo.png",
-      "title": "New Crypto Site",
-      "offer": "100% up to $100 USD",
-      "description": "Sports Bonus",
-      "promoCode": "CRIC2025",
-      "visitLink": "#",
-      "reviewLink": "#"
+      "name": "EKBET",
+      "logo": "assets/images/logos/ekbet-logo.jpg",
+      "title": "Premier Exchange",
+      "offer": "160% up to $185",
+      "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
+      "promoCode": null,
+      "visitLink": "https://7qv0.ekbet13.com",
+      "reviewLink": "https://7qv0.ekbet13.com"
+    },
+    {
+      "id": 6,
+      "rank": 6,
+      "name": "BETWINNER",
+      "logo": "assets/images/logos/betwinner-logo.jpg",
+      "title": "Premier Exchange",
+      "offer": "160% up to $185",
+      "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
+      "promoCode": null,
+      "visitLink": "https://betwinner2.com/en/user/login",
+      "reviewLink": "https://betwinner2.com/en/user/login"
+    },
+    {
+      "id": 7,
+      "rank": 7,
+      "name": "Dafabet",
+      "logo": "assets/images/logos/10cric-logo.jpg",
+      "title": "Premier Exchange",
+      "offer": "160% up to $185",
+      "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
+      "promoCode": null,
+      "visitLink": "https://partners.10cricaffiliates.com/visit/?bta=964&brand=10cric",
+      "reviewLink": "https://partners.10cricaffiliates.com/visit/?bta=964&brand=10cric"
     }
   ]
 }

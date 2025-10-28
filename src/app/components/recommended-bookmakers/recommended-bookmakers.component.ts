@@ -85,4 +85,7 @@ export class RecommendedBookmakersComponent implements OnInit {
     const emptyCount = Math.max(0, 5 - Math.min(5, Math.max(1, rank)));
     return Array(emptyCount).fill(0);
   }
+    openLink(link: string) {
+    window.open(link, '_blank');
+  }
 }

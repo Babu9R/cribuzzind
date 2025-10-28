@@ -2,57 +2,66 @@
   "carouselItems": [
     {
       "id": 1,
-      "image": "assets/images/carousel/12BET-01.jpg",
-      "logo": "assets/images/logos/dummy-logo.png",
+      "image": "assets/images/carousel/sky247.jpg",
+      "logo": "assets/images/logos/sky247-logo.jpg",
       "title": "Get Your Exclusive Offer $1,900 Bonus & 150 Free Spins",
       "promoCode": "CRIC2025",
       "buttonText": "CLAIM",
-      "buttonLink": "https://www.cricbuzz.com"
+      "buttonLink": "https://wlskyinfopartners.adsrv.eacdn.com/C.ashx?btag=a_295b_432c_&affid=81&siteid=295&adid=432&c="
     },
     {
       "id": 2,
-      "image": "assets/images/carousel/DAFABET-01.jpg",
-      "logo": "assets/images/logos/dummy-logo.png",
+      "image": "assets/images/carousel/dafabet.jpg",
+      "logo": "assets/images/logos/dafabet-logo.jpg",
       "title": "Bet on 20,000+ Sports Markets Enjoy Bonus 160% up to $185",
       "promoCode": null,
       "buttonText": "CLAIM",
-      "buttonLink": "https://www.cricbuzz.com"
+      "buttonLink": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136"
     },
     {
       "id": 3,
-      "image": "assets/images/carousel/EKBET -01.jpg",
-      "logo": "assets/images/logos/dummy-logo.png",
+      "image": "assets/images/carousel/inibet.jpg",
+      "logo": "assets/images/logos/inibet-logo.jpg",
       "title": "Weekly Chance to WIN Shared Prizes Worth up to $75,000",
       "promoCode": null,
       "buttonText": "CLAIM",
-      "buttonLink": "https://www.cricbuzz.com"
+      "buttonLink": "https://www.indibet.in/RAJESH13685"
     },
     {
       "id": 4,
-      "image": "assets/images/carousel/INDIBET-01.jpg",
-      "logo": "assets/images/logos/dummy-logo.png",
+      "image": "assets/images/carousel/12bet.jpg",
+      "logo": "assets/images/logos/12bet-logo.jpg",
       "title": "Welcome Bonus Up to 120% + 100 Free Spins",
       "promoCode": null,
       "buttonText": "CLAIM",
-      "buttonLink": "https://www.cricbuzz.com"
+      "buttonLink": "https://goto.12Bix24.com/join/10911/hien/xyz/index.html"
     },
     {
       "id": 5,
-      "image": "assets/images/carousel/INDIBET-01.jpg",
-      "logo": "assets/images/logos/dummy-logo.png",
+      "image": "assets/images/carousel/ekbet.jpg",
+      "logo": "assets/images/logos/ekbet-logo.jpg",
       "title": "Get Your Sports Welcome Bonus 150% up to $450",
       "promoCode": "WELCOME150",
       "buttonText": "CLAIM",
-      "buttonLink": "https://www.cricbuzz.com"
+      "buttonLink": "https://7qv0.ekbet13.com"
     },
     {
       "id": 6,
-      "image": "assets/images/carousel/INDIBET-01.jpg",
-      "logo": "assets/images/logos/dummy-logo.png",
+      "image": "assets/images/carousel/betwinner.jpg",
+      "logo": "assets/images/logos/betwinner-logo.jpg",
       "title": "Sports Bonus 100% up to $100 USD",
       "promoCode": "CRIC2025",
       "buttonText": "CLAIM",
-      "buttonLink": "https://www.cricbuzz.com"
+      "buttonLink": "https://betwinner2.com/en/user/login"
+    },
+    {
+      "id": 7,
+      "image": "assets/images/carousel/10cric.jpg",
+      "logo": "assets/images/logos/10cric-logo.jpg",
+      "title": "Sports Bonus 100% up to $100 USD",
+      "promoCode": "CRIC2025",
+      "buttonText": "CLAIM",
+      "buttonLink": "https://partners.10cricaffiliates.com/visit/?bta=964&brand=10cric"
     }
   ]
 }
