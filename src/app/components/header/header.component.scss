@@ -171,22 +171,29 @@
 }
 
 // Responsive Design
+@include respond-below(lg) {
+  .header-component {
+    .navbar-nav {
+      gap: var(--spacing-md);
+    }
+  }
+}
+
 @include respond-below(md) {
   .header-component {
     .header-content {
-      flex-wrap: wrap;
-      gap: var(--spacing-md);
+      flex-wrap: nowrap;
+      gap: var(--spacing-sm);
     }
     
     .navbar-nav {
-      order: 3;
-      width: 100%;
-      justify-content: center;
-      margin-top: var(--spacing-sm);
+      display: none; // Hide nav links on tablets and below
     }
     
     .header-actions {
-      order: 2;
+      .menu-toggle {
+        display: flex; // Show menu toggle on tablets and below
+      }
     }
   }
 }
@@ -198,30 +205,36 @@
       padding-right: var(--spacing-sm);
     }
     
-    .navbar-nav {
-      gap: var(--spacing-sm);
-      
-      .nav-link {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        font-size: var(--font-size-sm);
+    .logo-section {
+      .navbar-brand {
+        .logo-img {
+          height: 32px;
+        }
+        
+        font-size: var(--font-size-base);
       }
     }
     
     .header-actions {
-      gap: var(--spacing-sm);
+      gap: var(--spacing-xs);
       
       .btn-primary-custom {
-        font-size: var(--font-size-xs);
-        padding: var(--spacing-xs) var(--spacing-sm);
+        display: none; // Hide on very small screens to save space
       }
       
       .theme-toggle {
-        width: 35px;
-        height: 35px;
+        width: 36px;
+        height: 36px;
         
         i {
           font-size: var(--font-size-base);
         }
+      }
+      
+      .menu-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-base);
       }
     }
   }

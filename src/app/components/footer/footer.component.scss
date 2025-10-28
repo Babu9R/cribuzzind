@@ -235,26 +235,71 @@
 }
 
 // Responsive Design
+@include respond-below(lg) {
+  .footer-container {
+    .footer-top {
+      padding: var(--spacing-md) var(--spacing-xl);
+    }
+
+    .footer-disclaimer {
+      padding: var(--spacing-md) var(--spacing-xl);
+    }
+
+    .footer-badges {
+      padding: var(--spacing-md) var(--spacing-xl);
+    }
+
+    .footer-copyright {
+      padding: var(--spacing-md) var(--spacing-xl);
+    }
+  }
+}
+
 @include respond-below(md) {
   .footer-container {
     .footer-top {
       text-align: center;
+      padding: var(--spacing-md) var(--spacing-md);
+    }
+
+    .footer-brand {
+      margin-right: 0;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .footer-buttons {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
     }
 
     .footer-nav-section {
       text-align: center;
-      margin-bottom: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .footer-disclaimer {
+      padding: var(--spacing-md) var(--spacing-md);
+    }
+
+    .footer-badges {
+      padding: var(--spacing-md) var(--spacing-md);
     }
 
     .badges-container {
       flex-direction: column;
       align-items: center;
+      gap: var(--spacing-sm);
     }
 
     .regulatory-badge {
       width: 100%;
       max-width: 300px;
       justify-content: center;
+    }
+
+    .footer-copyright {
+      padding: var(--spacing-md) var(--spacing-md);
     }
   }
 
@@ -263,5 +308,73 @@
     right: var(--spacing-md);
     width: 45px;
     height: 45px;
+  }
+}
+
+@include respond-below(sm) {
+  .footer-container {
+    .footer-top {
+      padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .footer-logo {
+      i {
+        font-size: var(--font-size-xl);
+      }
+
+      span {
+        font-size: var(--font-size-lg);
+      }
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+
+      i {
+        font-size: var(--font-size-base);
+      }
+    }
+
+    .footer-disclaimer {
+      padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .disclaimer-text {
+      font-size: var(--font-size-xs);
+    }
+
+    .footer-badges {
+      padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .regulatory-badge {
+      padding: var(--spacing-sm);
+
+      img {
+        height: 24px;
+      }
+
+      span {
+        font-size: var(--font-size-xs);
+      }
+    }
+
+    .footer-copyright {
+      padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
+    .copyright-text {
+      font-size: var(--font-size-xs);
+    }
+  }
+
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+
+    i {
+      font-size: var(--font-size-base);
+    }
   }
 }

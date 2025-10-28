@@ -104,6 +104,7 @@
   background-color: theme-color('bg-card');
   min-height: 100vh;
   width: 300px;
+  max-width: 85vw;
   position: fixed;
   top: 0;
   right: -300px;
@@ -114,5 +115,52 @@
 
   &.show {
     right: 0;
+  }
+}
+
+// Responsive Design
+@include respond-below(md) {
+  .sidebar-menu {
+    width: 280px;
+    max-width: 85vw;
+  }
+  
+  .menu-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .menu-body {
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: calc(100vh - 70px);
+  }
+  
+  .menu-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+  
+  .sub-menu {
+    margin-left: var(--spacing-lg);
+  }
+  
+  .sub-menu-link {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+}
+
+@include respond-below(sm) {
+  .sidebar-menu {
+    width: 260px;
+    max-width: 90vw;
+  }
+  
+  .menu-link {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    
+    i {
+      margin-right: var(--spacing-xs);
+      font-size: var(--font-size-sm);
+    }
   }
 }

@@ -283,16 +283,35 @@
   .d-sm-none { display: none !important; }
   .d-sm-block { display: block !important; }
   .d-sm-flex { display: flex !important; }
+  .d-sm-inline-flex { display: inline-flex !important; }
+  .d-sm-grid { display: grid !important; }
 }
 
 @include respond-below(md) {
   .d-md-none { display: none !important; }
   .d-md-block { display: block !important; }
   .d-md-flex { display: flex !important; }
+  .d-md-inline-flex { display: inline-flex !important; }
+  .d-md-grid { display: grid !important; }
 }
 
 @include respond-below(lg) {
   .d-lg-none { display: none !important; }
   .d-lg-block { display: block !important; }
   .d-lg-flex { display: flex !important; }
+  .d-lg-inline-flex { display: inline-flex !important; }
+  .d-lg-grid { display: grid !important; }
+}
+
+// Additional responsive text utilities
+@include respond-below(md) {
+  .text-md-left { text-align: left !important; }
+  .text-md-center { text-align: center !important; }
+  .text-md-right { text-align: right !important; }
+}
+
+@include respond-below(sm) {
+  .text-sm-left { text-align: left !important; }
+  .text-sm-center { text-align: center !important; }
+  .text-sm-right { text-align: right !important; }
 }

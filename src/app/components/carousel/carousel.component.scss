@@ -37,9 +37,12 @@
 
 .carousel-wrapper {
   position: relative;
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: var(--spacing-xl) 0;
   padding: 0 var(--spacing-xl);
+  gap: var(--spacing-md);
 }
 
 .carousel-container {
@@ -254,10 +257,15 @@
   z-index: 10;
   transition: all var(--transition-normal);
   font-size: var(--font-size-lg);
+  flex-shrink: 0;
   
   &:hover {
     background: theme-color('btn-secondary-hover');
     transform: scale(1.1);
+  }
+  
+  &:active {
+    transform: scale(0.95);
   }
   
   &.prev {
@@ -310,6 +318,10 @@
       font-size: var(--font-size-base);
     }
   }
+  
+  .carousel-wrapper {
+    padding: 0 var(--spacing-lg);
+  }
 }
 
 @include respond-below(md) {
@@ -317,8 +329,41 @@
     flex: 0 0 100%;
   }
   
+  .carousel-wrapper {
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+  
   .carousel-nav {
-    display: none;
+    width: 45px;
+    height: 45px;
+    font-size: var(--font-size-base);
+    border: 2px solid theme-color('border-primary');
+    box-shadow: var(--shadow-md);
+    position: relative;
+    z-index: 15;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.9);
+    }
+    
+    &.prev {
+      order: 1;
+      margin: 0;
+    }
+    
+    &.next {
+      order: 3;
+      margin: 0;
+    }
+  }
+  
+  .carousel-container {
+    order: 2;
   }
   
   .carousel-content {
@@ -335,6 +380,96 @@
     p {
       font-size: var(--font-size-sm);
     }
+  }
+  
+  .carousel-card {
+    height: 18rem;
+  }
+  
+  .card-image {
+    height: 8rem;
+  }
+  
+  .card-content {
+    padding: var(--spacing-sm);
+  }
+  
+  .card-title {
+    font-size: var(--font-size-base);
+  }
+}
+
+@include respond-below(sm) {
+  .carousel-content {
+    padding: var(--spacing-sm) var(--spacing-xs);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .titles-section {
+    margin-bottom: var(--spacing-lg);
+    
+    h1 {
+      font-size: var(--font-size-xl);
+      line-height: 1.2;
+    }
+    
+    p {
+      font-size: var(--font-size-xs);
+    }
+  }
+  
+  .carousel-wrapper {
+    padding: 0 var(--spacing-sm);
+    margin: var(--spacing-md) 0;
+    gap: var(--spacing-xs);
+  }
+  
+  .carousel-nav {
+    width: 38px;
+    height: 38px;
+    font-size: var(--font-size-xs);
+    border: 2px solid theme-color('border-primary');
+    box-shadow: var(--shadow-md);
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  
+  .carousel-card {
+    height: 16rem;
+  }
+  
+  .card-image {
+    height: 6rem;
+  }
+  
+  .card-title {
+    font-size: var(--font-size-sm);
+  }
+  
+  .btn-dark {
+    padding: var(--btn-padding-sm);
+    font-size: var(--font-size-xs);
+  }
+  
+  .promo-code input {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs);
+  }
+  
+  .carousel-indicators {
+    margin-top: var(--spacing-md);
+    gap: var(--spacing-xs);
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
   }
 }
 

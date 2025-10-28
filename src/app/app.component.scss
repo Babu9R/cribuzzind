@@ -33,10 +33,12 @@
 .app-content {
   min-height: calc(100vh - 200px);
   width: 100%;
+  max-width: 100%;
   padding: var(--spacing-xl) var(--spacing-4xl) 0 var(--spacing-4xl);
   overflow-x: hidden;
   background-color: theme-color('bg-primary');
   transition: background-color var(--transition-normal);
+  box-sizing: border-box;
 }
 
 
