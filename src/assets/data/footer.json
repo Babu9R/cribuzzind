@@ -2,7 +2,8 @@
   "footer": {
     "logo": {
       "text": "Cricbuzzind",
-      "icon": "fas fa-cricket"
+      "icon": "fas fa-cricket",
+      "image": "assets/images/logos/cricbuzz.png"
     },
     "socialMedia": [
       {
@@ -69,7 +70,7 @@
       },
       {
         "name": "Gambling Therapy",
-        "image": "assets/images/badges/gambling-therapy.png"
+        "image": "assets/images/logos/bc-game-logo.jpg"
       },
       {
         "name": "Gamblers Anonymous",

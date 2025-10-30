@@ -48,7 +48,7 @@
       }
       
       .logo-img {
-        height: 40px;
+        height: 2.5rem;
         width: auto;
         object-fit: contain;
         transition: transform var(--transition-normal);
@@ -138,8 +138,8 @@
     // Theme toggle button
     .theme-toggle {
       @include flex-center;
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
       background: transparent;
       border: 1px solid theme-color('border-primary');
       border-radius: var(--border-radius-md);
@@ -191,9 +191,7 @@
     }
     
     .header-actions {
-      .menu-toggle {
-        display: flex; // Show menu toggle on tablets and below
-      }
+      .menu-toggle { display: none; } // move menu toggle to footer on mobile
     }
   }
 }
@@ -223,8 +221,8 @@
       }
       
       .theme-toggle {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         
         i {
           font-size: var(--font-size-base);
@@ -232,8 +230,8 @@
       }
       
       .menu-toggle {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         font-size: var(--font-size-base);
       }
     }

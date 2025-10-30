@@ -62,6 +62,15 @@
       "promoCode": "CRIC2025",
       "buttonText": "CLAIM",
       "buttonLink": "https://partners.10cricaffiliates.com/visit/?bta=964&brand=10cric"
+    },
+    {
+      "id": 8,
+      "image": "assets/images/carousel/bc-game.jpg",
+      "logo": "assets/images/logos/bc-game-logo.jpg",
+      "title": "Sports Bonus 100% up to $100 USD",
+      "promoCode": null,
+      "buttonText": "CLAIM",
+      "buttonLink": "https://bc.game/i-2ztuzvsgy-n"
     }
   ]
 }

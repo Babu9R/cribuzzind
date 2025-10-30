@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -28,7 +28,27 @@ export class CarouselComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
+    this.updateVisibleSlides();
     this.loadCarouselData();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateVisibleSlides();
+  }
+
+  private updateVisibleSlides() {
+    const w = window.innerWidth;
+    if (w < 768) {
+      this.visibleSlides = 1; // phones
+    } else if (w < 1200) {
+      this.visibleSlides = 2; // tablets / small laptops
+    } else {
+      this.visibleSlides = 3; // desktops
+    }
+    // clamp
+    const maxStart = Math.max(0, this.totalSlides - this.visibleSlides);
+    if (this.currentSlide > maxStart) this.currentSlide = maxStart;
   }
 
   loadCarouselData() {
@@ -36,6 +56,7 @@ export class CarouselComponent implements OnInit {
       next: (data) => {
         this.carouselItems = data.carouselItems;
         this.totalSlides = this.carouselItems.length;
+        this.updateVisibleSlides();
         console.log('Carousel data loaded successfully:', this.carouselItems);
       },
       error: (error) => {
@@ -56,7 +77,7 @@ export class CarouselComponent implements OnInit {
     if (this.currentSlide > 0) {
       this.currentSlide--;
     } else {
-      this.currentSlide = this.totalSlides - this.visibleSlides;
+      this.currentSlide = Math.max(0, this.totalSlides - this.visibleSlides);
     }
   }
 

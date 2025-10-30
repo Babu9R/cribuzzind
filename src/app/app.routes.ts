@@ -5,7 +5,7 @@ import { OddsComponent } from './pages/odds/odds.component';
 import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'tips', component: TipsComponent },
   { path: 'bookmakers', component: BookmakersComponent },

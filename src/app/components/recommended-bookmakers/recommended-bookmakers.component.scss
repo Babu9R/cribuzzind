@@ -14,6 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   margin-bottom: 1.5rem;
   
   h2 {
@@ -59,7 +60,8 @@
 
 .bookmaker-card {
   position: relative;
-  padding: var(--spacing-lg);
+  // Extra top padding to accommodate a multi-line corner badge
+  padding: calc(var(--spacing-lg) + 1.75rem) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   background: theme-color('bg-card');
   border: 1px solid theme-color('border-primary');
   border-radius: var(--border-radius-lg);
@@ -73,17 +75,26 @@
 
 .category-badge {
   position: absolute;
-  top: var(--spacing-md);
-  left: var(--spacing-md);
-  z-index: 1;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  z-index: 2;
+  max-width: calc(100% - (var(--spacing-sm) * 2));
+  pointer-events: none; // purely decorative
   
   .badge-text {
+    display: inline-block;
     background: theme-color('link-primary');
     color: theme-color('text-inverse');
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--border-radius-sm);
+    padding: 0.25rem 0.6rem;
+    border-top-right-radius: var(--border-radius-md);
+    border-bottom-right-radius: var(--border-radius-md);
+    border-top-left-radius: var(--border-radius-sm);
+    border-bottom-left-radius: var(--border-radius-sm);
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semibold);
+    max-width: 85%;
+    white-space: normal; // allow wrapping
+    line-height: 1.1;
   }
 }
 
@@ -362,7 +373,8 @@
 
 @include respond-below(md) {
   .section-header {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     gap: var(--spacing-sm);
     
@@ -372,15 +384,30 @@
   }
   
   .card-content {
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--spacing-md);
   }
   
   .left-section {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: var(--spacing-lg);
     align-items: center;
     min-width: auto;
+  }
+  .category-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    z-index: 1;
+    
+    .badge-text {
+      background: theme-color('link-primary');
+      color: theme-color('text-inverse');
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-sm);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+    }
   }
   
   .bookmaker-logo {
@@ -388,7 +415,8 @@
   }
   
   .logo-img {
-    height: 30px;
+    height: 4rem;
+    width: 8rem;
   }
   
   .bookmaker-actions {
@@ -406,7 +434,7 @@
   }
   
   .card-actions {
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--spacing-sm);
   }
   

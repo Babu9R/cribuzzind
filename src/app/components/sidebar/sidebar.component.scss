@@ -98,13 +98,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 60px;
+  min-height: 5rem;
   
   .bookmaker-logo {
-    width: 100%;
-    max-width: 80px;
-    height: auto;
-    max-height: 40px;
+    width: 96px;
+    height: 36px;
     object-fit: contain;
   }
 }
@@ -120,17 +118,24 @@
 .offer-text {
   color: theme-color('text-primary');
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-snug);
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .visit-btn {
   background: theme-color('link-primary');
   color: theme-color('text-inverse');
   border: none;
-  border-radius: var(--border-radius-sm);
-  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  min-width: 64px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   cursor: pointer;
@@ -145,27 +150,28 @@
 
 // Promo Code Footer
 .promo-footer {
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
 }
 
 .dotted-line {
   width: 100%;
   height: 1px;
-  border-top: 1px dotted theme-color('border-secondary');
-  margin-bottom: var(--spacing-sm);
+  border-top: 1px dashed theme-color('border-secondary');
+  margin-bottom: var(--spacing-xs);
 }
 
 .promo-content {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
-  padding-left: var(--spacing-sm);
+  padding-left: 0;
+  justify-content: center;
 }
 
 .promo-text {
   color: theme-color('text-secondary');
   font-size: var(--font-size-xs);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .promo-code {
@@ -178,8 +184,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background: theme-color('link-primary');
   color: theme-color('text-inverse');
   border: none;
@@ -307,7 +313,7 @@
   background: theme-color('bg-card');
   border: 1px solid theme-color('border-primary');
   border-radius: var(--border-radius-md);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   text-decoration: none;
   transition: all var(--transition-normal);
   
@@ -414,11 +420,11 @@
   }
   
   .bookmaker-image-section {
-    min-height: 50px;
+    min-height: 5rem;
     
     .bookmaker-logo {
-      max-width: 60px;
-      max-height: 30px;
+      max-width: 8rem;
+      max-height: 4rem;
     }
   }
   
@@ -442,6 +448,7 @@
   .promo-content {
     padding-left: var(--spacing-xs);
     gap: var(--spacing-xs);
+    justify-content: center;
   }
   
   .promo-text,
@@ -461,7 +468,7 @@
   
   .community-card,
   .signup-card {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
   }
   
   .card-title {
@@ -482,7 +489,7 @@
   }
   
   .tournament-card {
-    padding: var(--spacing-xs);
+    padding: var(--spacing-md);
   }
   
   .tournament-name {

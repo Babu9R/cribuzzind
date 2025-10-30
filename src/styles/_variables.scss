@@ -179,11 +179,11 @@ $shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 
 // BREAKPOINT VARIABLES
 // ===========================================
 $breakpoint-xs: 0;
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-2xl: 1400px;
+$breakpoint-sm: 640px;   // sm: phones landscape / small tablets
+$breakpoint-md: 900px;   // md: tablets / small laptops
+$breakpoint-lg: 1200px;  // lg: desktops
+$breakpoint-xl: 1400px;  // keep for larger desktops
+$breakpoint-2xl: 1600px; // optional super-wide
 
 // ===========================================
 // Z-INDEX VARIABLES

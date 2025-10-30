@@ -4,11 +4,11 @@
     <!-- Top Section -->
     <div class="footer-top">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 brand-col">
           <!-- Logo and Social Media -->
           <div class="footer-brand">
             <div class="footer-logo">
-              <i [class]="footerData.logo.icon"></i>
+              <img [src]="footerData.logo.image" [alt]="footerData.logo.text" class="footer-logo-image">
               <span>{{ footerData.logo.text }}</span>
             </div>
             
@@ -32,8 +32,8 @@
           </div>
         </div>        
         <!-- Navigation Sections -->
-        <div class="col-md-8" style="padding-left: 20rem;">
-          <div class="row">
+        <div class="col-md-8 nav-col">
+          <div class="row footer-nav-grid">
             <div class="col-md-4" *ngFor="let section of footerData.navigationSections">
               <div class="footer-nav-section">
                 <h5 class="nav-title">{{ section.title }}</h5>
@@ -86,6 +86,30 @@
     </div>
   </div>
   
+  <!-- Mobile Bottom Nav (visible on < md) -->
+  <nav class="mobile-bottom-nav" [style.--active-index]="activeIndex">
+    <a routerLink="/tips" routerLinkActive="active" class="mobile-nav-item">
+      <i class="fas fa-trophy"></i>
+      <span>Tips</span>
+    </a>
+    <a routerLink="/bookmakers" routerLinkActive="active" class="mobile-nav-item">
+      <i class="fas fa-book"></i>
+      <span>Bookmakers</span>
+    </a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="mobile-nav-item">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a routerLink="/odds" routerLinkActive="active" class="mobile-nav-item">
+      <i class="fas fa-chart-line"></i>
+      <span>Odds</span>
+    </a>
+    <button class="mobile-nav-item" (click)="onToggleMenu()" aria-label="Open Menu">
+      <i class="fas fa-bars"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
+
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" (click)="scrollToTop()">
     <i class="fas fa-arrow-up"></i>

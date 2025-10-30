@@ -19,7 +19,7 @@
           "bet": "Australia total runs before fall of 1st wicket - Over 32.5",
           "odds": "1.87",
           "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bcgame-logo.png"
+          "logo": "assets/images/logos/bc-game-logo.jpg"
         },
         {
           "bet": "Mitchell Marsh to score over 29.5 runs",
@@ -48,7 +48,7 @@
           "bet": "Tim Seifert to score Over 21.5 runs",
           "odds": "1.85",
           "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bcgame-logo.png"
+          "logo": "assets/images/logos/bc-game-logo.jpg"
         },
         {
           "bet": "Highest opening partnership - England",
@@ -83,7 +83,7 @@
           "bet": "West Indies to score 20 runs or less in the first 5 overs",
           "odds": "1.86",
           "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bcgame-logo.png"
+          "logo": "assets/images/logos/bc-game-logo.jpg"
         }
       ]
     }
