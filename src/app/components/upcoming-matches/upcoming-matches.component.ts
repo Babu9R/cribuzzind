@@ -29,7 +29,7 @@ interface Prediction {
 export class UpcomingMatchesComponent implements OnInit {
   matches: Match[] = [];
   visibleMatches: Match[] = [];
-  matchesPerPage = 2;
+  matchesPerPage = 3;
   currentPage = 1;
   hasMoreMatches = false;
 

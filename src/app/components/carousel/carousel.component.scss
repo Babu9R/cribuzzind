@@ -97,15 +97,17 @@
 }
 
 .card-logo {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    // background: rgba(0, 0, 0, 0.8);
+    background: var(--btn-inverse-bg);
+
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
   
   img {
-    height: 25px;
+    height: 2rem;
     width: auto;
   }
 }

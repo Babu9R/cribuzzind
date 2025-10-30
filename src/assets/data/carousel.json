@@ -30,7 +30,7 @@
     {
       "id": 4,
       "image": "assets/images/carousel/12bet.jpg",
-      "logo": "assets/images/logos/12bet-logo.jpg",
+      "logo": "assets/images/logos/12bet-logo.png",
       "title": "Welcome Bonus Up to 120% + 100 Free Spins",
       "promoCode": null,
       "buttonText": "CLAIM",
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "image": "assets/images/carousel/10cric.jpg",
-      "logo": "assets/images/logos/10cric-logo.jpg",
+      "logo": "assets/images/logos/10cric-logo.png",
       "title": "Sports Bonus 100% up to $100 USD",
       "promoCode": "CRIC2025",
       "buttonText": "CLAIM",
