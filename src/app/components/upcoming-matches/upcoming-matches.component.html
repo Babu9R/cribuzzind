@@ -50,7 +50,7 @@
           <div class="prediction-bet">
             <span class="bet-text">{{ prediction.bet }}</span>
           </div>
-          <div class="prediction-odds">
+          <div class="prediction-odds" (click)="openLink(prediction.link)">
             <div class="bookmaker-badge">
               <img [src]="prediction.logo" [alt]="prediction.bookmaker" class="bookmaker-logo">
               <!-- {{ prediction.bookmaker }} -->

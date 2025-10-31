@@ -24,7 +24,7 @@ interface Bookmaker {
 export class RecommendedBookmakersComponent implements OnInit {
   bookmakers: Bookmaker[] = [];
   visibleBookmakers: Bookmaker[] = [];
-  bookmakersPerPage = 3;
+  bookmakersPerPage = 4;
   currentPage = 1;
   hasMoreBookmakers = false;
   copiedStates: { [key: number]: boolean } = {}; // Track copied state for each bookmaker

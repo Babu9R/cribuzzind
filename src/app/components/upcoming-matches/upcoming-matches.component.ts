@@ -18,6 +18,7 @@ interface Prediction {
   odds: string;
   bookmaker: string;
   logo: string;
+  link: string;
 }
 
 @Component({
@@ -62,5 +63,8 @@ export class UpcomingMatchesComponent implements OnInit {
   loadMoreMatches() {
     this.currentPage++;
     this.updateVisibleMatches();
+  }
+   openLink(link: string) {
+    window.open(link, '_blank');
   }
 }

@@ -12,20 +12,23 @@
         {
           "bet": "India to win",
           "odds": "2.25",
-          "bookmaker": "1XBET",
-          "logo": "assets/images/logos/1xbet-logo.png"
+          "bookmaker": "12BET",
+          "logo": "assets/images/logos/12bet-logo.png",
+          "link":"https://goto.12Bix24.com/join/10911/hien/xyz/index.html"
         },
         {
           "bet": "Australia total runs before fall of 1st wicket - Over 32.5",
           "odds": "1.87",
           "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bc-game-logo.jpg"
+          "logo": "assets/images/logos/bc-game-logo.jpg",
+          "link": "https://bc.game/i-2ztuzvsgy-n"
         },
         {
           "bet": "Mitchell Marsh to score over 29.5 runs",
           "odds": "1.85",
           "bookmaker": "@dafabet",
-          "logo": "assets/images/logos/dafabet-logo.png"
+          "logo": "assets/images/logos/dafabet-logo.png",
+          "link": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136"
         }
       ]
     },
@@ -41,20 +44,23 @@
         {
           "bet": "England to win",
           "odds": "1.60",
-          "bookmaker": "1XBET",
-          "logo": "assets/images/logos/1xbet-logo.png"
+          "bookmaker": "12BET",
+          "logo": "assets/images/logos/12bet-logo.png",
+          "link":"https://goto.12Bix24.com/join/10911/hien/xyz/index.html"
         },
         {
           "bet": "Tim Seifert to score Over 21.5 runs",
           "odds": "1.85",
           "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bc-game-logo.jpg"
+          "logo": "assets/images/logos/bc-game-logo.jpg",
+          "link": "https://bc.game/i-2ztuzvsgy-n"
         },
         {
           "bet": "Highest opening partnership - England",
           "odds": "1.70",
           "bookmaker": "@dafabet",
-          "logo": "assets/images/logos/dafabet-logo.png"
+          "logo": "assets/images/logos/dafabet-logo.png",
+          "link": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136"
         }
       ]
     },
@@ -70,20 +76,23 @@
         {
           "bet": "Bangladesh to win",
           "odds": "1.65",
-          "bookmaker": "1XBET",
-          "logo": "assets/images/logos/1xbet-logo.png"
+          "bookmaker": "12BET",
+          "logo": "assets/images/logos/12bet-logo.png",
+          "link":"https://goto.12Bix24.com/join/10911/hien/xyz/index.html"
         },
         {
           "bet": "Bangladesh not to lose a wicket in the first over",
           "odds": "1.13",
           "bookmaker": "@dafabet",
-          "logo": "assets/images/logos/dafabet-logo.png"
+          "logo": "assets/images/logos/dafabet-logo.png",
+          "link": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136"
         },
         {
           "bet": "West Indies to score 20 runs or less in the first 5 overs",
           "odds": "1.86",
           "bookmaker": "BC.GAME",
-          "logo": "assets/images/logos/bc-game-logo.jpg"
+          "logo": "assets/images/logos/bc-game-logo.jpg",
+          "link": "https://bc.game/i-2ztuzvsgy-n"
         }
       ]
     }

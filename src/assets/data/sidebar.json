@@ -25,7 +25,7 @@
         "description": "Bet on 20,000+ Sports Markets Enjoy Bonus",
         "promoCode": null,
         "visitLink": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136",
-        "reviewLink": ""
+        "reviewLink": "https://banners.dfbanners.com/redirect.aspx?pid=75188&bid=17136"
       },
       {
         "id": 3,
@@ -86,6 +86,17 @@
         "promoCode": null,
         "visitLink": "https://partners.10cricaffiliates.com/visit/?bta=964&brand=10cric",
         "reviewLink": "https://partners.10cricaffiliates.com/visit/?bta=964&brand=10cric"
+      },
+      {
+        "id": 8,
+        "rank": 8,
+        "image": "assets/images/carousel/bc-game.jpg",
+        "logo": "assets/images/logos/bc-game-logo.jpg",
+        "title": "Sports Bonus 100% up to $100 USD",
+        "promoCode": null,
+        "buttonText": "CLAIM",
+        "visitLink": "https://bc.game/i-2ztuzvsgy-n",
+        "reviewLink": "https://bc.game/i-2ztuzvsgy-n"
       }
     ]
   },
